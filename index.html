@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Домашняя пекарня — Выпечка ручной работы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div id="home" class="page active">
+ 
+<!-- Logo -->
+<div class="logo-wrap">
+
+    <div class="logo-circle">
+        <img src="images/logo.png" alt="DALÍ Coffee and Bakery">
+    </div>
+
+    <div class="logo-name">DALÍ</div>
+    <div class="logo-sub">Coffee and Bakery</div>
+
+</div>
+
+<!-- Welcome -->
+<div class="welcome">
+    <p>
+         Кофе, свежая выпечка и тёплая атмосфера.<br>
+        Место, куда хочется возвращаться снова.    </p>
+</div>
+
+<div class="divider"></div>
+ 
+  <!-- Links -->
+  <div class="links">
+ 
+    <a href="https://2gis.ru" target="_blank" class="link-btn">
+      <div class="link-icon icon-map">📍</div>
+      <div>
+        <div style="font-size:14px;font-weight:600">Адрес</div>
+        <div style="font-size:11px;color:var(--smoke);margin-top:1px">Показать на карте</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+ 
+    <a href="https://instagram.com" target="_blank" class="link-btn">
+      <div class="link-icon icon-inst">📸</div>
+      <div>
+        <div style="font-size:14px;font-weight:600">Instagram</div>
+        <div style="font-size:11px;color:var(--smoke);margin-top:1px">@la.farine.bakery</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+ 
+    <a href="tel:+77770000000" class="link-btn">
+      <div class="link-icon icon-call">📞</div>
+      <div>
+        <div style="font-size:14px;font-weight:600">Позвонить</div>
+        <div style="font-size:11px;color:var(--smoke);margin-top:1px">+7 (777) 000-00-00</div>
+      </div>
+      <div class="link-arrow">›</div>
+    </a>
+ 
+  </div>
+ 
+  <!-- Big menu button -->
+  <button class="menu-big-btn" onclick="openMenu()">
+    🍰 &nbsp;Смотреть меню
+  </button>
+ 
+</div><!-- /home -->
+ 
+ 
+<!-- ══════════════ MENU PAGE ══════════════ -->
+<div id="menu-page" class="page">
+ 
+  <!-- Sticky header -->
+  <div class="menu-header">
+    <div class="menu-top">
+      <button class="back-btn" onclick="closeMenu()">←</button>
+      <div class="menu-title">Наше меню</div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" onclick="switchCat('cakes',this)">🎂 Торты</button>
+      <button class="tab" onclick="switchCat('cheesecakes',this)">🍰 Чизкейки</button>
+      <button class="tab" onclick="switchCat('buns',this)">🥐 Булочки</button>
+      <button class="tab" onclick="switchCat('pastry',this)">🍮 Пирожные</button>
+      <button class="tab" onclick="switchCat('cookies',this)">🍪 Печенье</button>
+      <button class="tab" onclick="switchCat('drinks',this)">☕ Напитки</button>
+    </div>
+  </div>
+ 
+  <!-- Products -->
+  <div class="products" id="products">
+ 
+    <!-- ТОРТЫ -->
+    <div class="cat-section active" id="cat-cakes">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/napoleon.jpg" alt="Наполеон">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Наполеон</div>
+          <div class="card-desc">Слоёное тесто, заварной крем, ванильный аромат</div>
+          <div class="card-foot">
+            <div class="card-price">4 200 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Наполеон')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/medovik.jpg" alt="Медовик">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Медовик</div>
+          <div class="card-desc">Медовые коржи, нежный сметанный крем, карамельные нотки</div>
+          <div class="card-foot">
+            <div class="card-price">3 800 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Медовик')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/chockltort.jpg" alt="Шоколадный торт">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Шоколадный</div>
+          <div class="card-desc">Бисквит на бельгийском шоколаде, шоколадный ганаш, вишня</div>
+          <div class="card-foot">
+            <div class="card-price">4 500 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Шоколадный торт')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/yagodnyitort.jpg" alt="Ягодный торт">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Ягодный</div>
+          <div class="card-desc">Ванильный бисквит, сливочный крем, свежие ягоды, зеркальная глазурь</div>
+          <div class="card-foot">
+            <div class="card-price">4 900 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Ягодный торт')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /cakes -->
+ 
+    <!-- ЧИЗКЕЙКИ -->
+    <div class="cat-section" id="cat-cheesecakes">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/newyork.jpg" alt="Нью-Йорк">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Нью-Йорк</div>
+          <div class="card-desc">Сливочный сыр, песочная основа, ванильный аромат</div>
+          <div class="card-foot">
+            <div class="card-price">1 400 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Чизкейк Нью-Йорк')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/strawberry_cheesecake.jpg" alt="Клубничный чизкейк">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Клубничный</div>
+          <div class="card-desc">Нежный чизкейк, крем-сыр, свежая клубника, ягодный кули</div>
+          <div class="card-foot">
+            <div class="card-price">1 600 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Клубничный чизкейк')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/chernichniy_cheescake.jpg" alt="Черничный чизкейк">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Черничный</div>
+          <div class="card-desc">Творожный крем, голубика, хрустящая песочная основа</div>
+          <div class="card-foot">
+            <div class="card-price">1 600 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Черничный чизкейк')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/cheeskaramel.jpg" alt="Карамельный чизкейк">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Карамельный</div>
+          <div class="card-desc">Крем-сыр, солёная карамель, брауни-основа, хрустящий декор</div>
+          <div class="card-foot">
+            <div class="card-price">1 700 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Карамельный чизкейк')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /cheesecakes -->
+ 
+    <!-- БУЛОЧКИ -->
+    <div class="cat-section" id="cat-buns">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/cinnabon.jpg" alt="Синнабон">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Синнабон</div>
+          <div class="card-desc">Мягкое тесто, корица, сливочная глазурь с сыром</div>
+          <div class="card-foot">
+            <div class="card-price">550 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Синнабон')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/croissant.jpg" alt="Круассан">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Круассан</div>
+          <div class="card-desc">Слоёное дрожжевое тесто, хрустящий, тающий внутри</div>
+          <div class="card-foot">
+            <div class="card-price">450 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Круассан')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/smakom.jpg" alt="С маком">
+        </div>
+        <div class="card-body">
+          <div class="card-name">С маком</div>
+          <div class="card-desc">Сдобное тесто, начинка из мака с мёдом, посыпка кунжутом</div>
+          <div class="card-foot">
+            <div class="card-price">380 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Булочка с маком')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/briosh.jpg" alt="Бриошь">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Бриошь</div>
+          <div class="card-desc">Французская сдоба, сливочная, нежная, со сливочным маслом</div>
+          <div class="card-foot">
+            <div class="card-price">420 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Бриошь')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /buns -->
+ 
+    <!-- ПИРОЖНЫЕ -->
+    <div class="cat-section" id="cat-pastry">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/ecler.jpg" alt="Эклер">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Эклер</div>
+          <div class="card-desc">Заварное тесто, крем патисьер, шоколадная глазурь</div>
+          <div class="card-foot">
+            <div class="card-price">480 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Эклер')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/tiramisu.jpg" alt="Тирамису">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Тирамису</div>
+          <div class="card-desc">Савоярди, маскарпоне, эспрессо, какао-пудра</div>
+          <div class="card-foot">
+            <div class="card-price">650 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Тирамису')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/macarons.jpg" alt="Макарон">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Макарон</div>
+          <div class="card-desc">Миндальное безе, нежная начинка на выбор, яркие цвета</div>
+          <div class="card-foot">
+            <div class="card-price">280 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Макарон')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/brauni.jpg" alt="Брауни">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Брауни</div>
+          <div class="card-desc">Бельгийский шоколад, хрустящая корочка, тающая серединка</div>
+          <div class="card-foot">
+            <div class="card-price">520 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Брауни')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /pastry -->
+ 
+    <!-- ПЕЧЕНЬЕ -->
+    <div class="cat-section" id="cat-cookies">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80" alt="Шоколадное печенье">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Шоколадное</div>
+          <div class="card-desc">Крупные кусочки шоколада, хрустящее, мягкое в центре</div>
+          <div class="card-foot">
+            <div class="card-price">220 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Шоколадное печенье')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&q=80" alt="Овсяное">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Овсяное</div>
+          <div class="card-desc">Цельный овёс, изюм, мёд, корица — домашнее и полезное</div>
+          <div class="card-foot">
+            <div class="card-price">180 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Овсяное печенье')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/orehpechenya.jpg" alt="Ореховое">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Ореховое</div>
+          <div class="card-desc">Миндаль, фундук, коричневый сахар, ванильная эссенция</div>
+          <div class="card-foot">
+            <div class="card-price">240 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Ореховое печенье')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/imbirpechenya.jpg" alt="Имбирное">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Имбирное</div>
+          <div class="card-desc">Пряное тесто, имбирь, корица, айсинговая глазурь</div>
+          <div class="card-foot">
+            <div class="card-price">200 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Имбирное печенье')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /cookies -->
+ 
+    <!-- НАПИТКИ -->
+    <div class="cat-section" id="cat-drinks">
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/cappuciano.jpg" alt="Капучино">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Капучино</div>
+          <div class="card-desc">Эспрессо, вспененное молоко, нежная пенка</div>
+          <div class="card-foot">
+            <div class="card-price">950 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Капучино')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/latte.jpg" alt="Латте">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Латте</div>
+          <div class="card-desc">Двойной эспрессо, тёплое молоко, карамельный топпинг</div>
+          <div class="card-foot">
+            <div class="card-price">1 050 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Латте')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/hotkakao.jpg" alt="Какао">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Горячий Какао</div>
+          <div class="card-desc">Натуральный какао, молоко, ванильная нотка, зефир</div>
+          <div class="card-foot">
+            <div class="card-price">850 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Горячий Какао')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img">
+          <img src="images/matchalatte.jpg" alt="Матча">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Матча Латте</div>
+          <div class="card-desc">Японская матча, овсяное молоко, мёд</div>
+          <div class="card-foot">
+            <div class="card-price">1 150 <span>₸</span></div>
+            <button class="order-btn" onclick="orderWA('Матча Латте')">Заказать</button>
+          </div>
+        </div>
+      </div>
+ 
+    </div><!-- /drinks -->
+ 
+  </div><!-- /products -->
+ 
+</div><!-- /menu-page -->
+ 
+<!-- Sticky WA button (shown on menu page) -->
+<div class="sticky-wa" id="stickyWa" style="display:none">
+  <button class="wa-btn" onclick="openWA()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.562 4.136 1.541 5.868L.057 23.885a.5.5 0 00.613.604l6.218-1.63A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.887 9.887 0 01-5.031-1.373l-.36-.214-3.733.979.998-3.648-.235-.374A9.86 9.86 0 012.1 12c0-5.468 4.432-9.9 9.9-9.9 5.467 0 9.9 4.432 9.9 9.9 0 5.467-4.433 9.9-9.9 9.9z"/>
+    </svg>
+    Доставка / Заказать в WhatsApp
+  </button>
+</div>
+ <script src="script.js"></script>
+</body>
+</html>
