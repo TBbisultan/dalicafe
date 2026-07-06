@@ -6,16 +6,22 @@ const params = new URLSearchParams(window.location.search);
 const tableNumber = params.get('table');
 
 function openMenu() {
+  document.body.classList.add('menu-open');
+
   document.getElementById('home').classList.remove('active');
   document.getElementById('menu-page').classList.add('active');
   document.getElementById('stickyWa').style.display = 'block';
+
   window.scrollTo(0, 0);
 }
 
 function closeMenu() {
+  document.body.classList.remove('menu-open');
+
   document.getElementById('menu-page').classList.remove('active');
   document.getElementById('home').classList.add('active');
   document.getElementById('stickyWa').style.display = 'none';
+
   window.scrollTo(0, 0);
 }
 
