@@ -644,47 +644,53 @@ img {
     max-width: 100%;
   }
 }
-/* FIX MOBILE MENU */
+/* FIX CENTER MOBILE */
 @media (max-width: 768px) {
+  body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
   #home,
   #menu-page {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 480px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
   }
 
-  .products {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 18px 18px 120px !important;
-    gap: 18px !important;
-  }
-
-  .cat-section.active {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-  }
-
-  .card {
+  .links,
+  .menu-big-btn {
     width: 100% !important;
     max-width: 100% !important;
-  }
-
-  .card-img {
-    height: 220px !important;
-  }
-
-  .card-name {
-    font-size: 22px !important;
-  }
-
-  .card-desc {
-    font-size: 14px !important;
   }
 
   .sticky-wa {
     width: 100% !important;
+    max-width: 480px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .wa-btn {
+    width: 100% !important;
     max-width: 100% !important;
+  }
+
+  .products {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .menu-header {
+    margin-left: -22px !important;
+    margin-right: -22px !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    width: calc(100% + 44px) !important;
   }
 }
