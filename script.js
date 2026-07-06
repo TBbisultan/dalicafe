@@ -1,4 +1,4 @@
-const WA_NUMBER = '77770000000'; // номер клиента без +
+const WA_NUMBER = '77770000000'; // ← заменить на реальный номер без +
 
 let cart = {};
 
@@ -6,22 +6,16 @@ const params = new URLSearchParams(window.location.search);
 const tableNumber = params.get('table');
 
 function openMenu() {
-  document.body.classList.add('menu-open');
-
   document.getElementById('home').classList.remove('active');
   document.getElementById('menu-page').classList.add('active');
   document.getElementById('stickyWa').style.display = 'block';
-
   window.scrollTo(0, 0);
 }
 
 function closeMenu() {
-  document.body.classList.remove('menu-open');
-
   document.getElementById('menu-page').classList.remove('active');
   document.getElementById('home').classList.add('active');
   document.getElementById('stickyWa').style.display = 'none';
-
   window.scrollTo(0, 0);
 }
 
@@ -57,9 +51,14 @@ function removeFromCart(item) {
 }
 
 function updateAllButtons() {
-  document.querySelectorAll('.order-btn').forEach(btn => {
-    const onclick = btn.getAttribute('onclick');
-    const match = onclick.match(/orderWA\('(.+)'\)/);
+  document.querySelectorAll('.card').forEach(card => {
+    const btn = card.querySelector('.order-btn, .qty-control');
+    if (!btn) return;
+
+    const oldClick = btn.getAttribute('onclick') || btn.querySelector('button:last-child')?.getAttribute('onclick');
+    if (!oldClick) return;
+
+    const match = oldClick.match(/(?:orderWA|addToCart)\('(.+?)'\)/);
     if (!match) return;
 
     const item = match[1];
@@ -77,22 +76,6 @@ function updateAllButtons() {
       btn.outerHTML = `<button class="order-btn" onclick="orderWA('${item}')">+</button>`;
     }
   });
-
-  document.querySelectorAll('.qty-control').forEach(control => {
-    const plusBtn = control.querySelector('button:last-child');
-    const onclick = plusBtn.getAttribute('onclick');
-    const match = onclick.match(/addToCart\('(.+)'\)/);
-    if (!match) return;
-
-    const item = match[1];
-    const qty = cart[item] || 0;
-
-    if (qty === 0) {
-      control.outerHTML = `<button class="order-btn" onclick="orderWA('${item}')">+</button>`;
-    } else {
-      control.querySelector('span').textContent = qty;
-    }
-  });
 }
 
 function getCartCount() {
@@ -102,6 +85,8 @@ function getCartCount() {
 function updateCartButton() {
   const count = getCartCount();
   const waBtn = document.querySelector('.wa-btn');
+
+  if (!waBtn) return;
 
   if (count > 0) {
     waBtn.innerHTML = `🛒 Корзина — ${count} шт · Заказать`;
@@ -136,5 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = '+';
   });
 
+  document.getElementById('stickyWa').style.display = 'none';
   updateCartButton();
 });
