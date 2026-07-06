@@ -694,3 +694,18 @@ img {
     width: calc(100% + 44px) !important;
   }
 }
+body {
+  scrollbar-gutter: stable;
+}
+
+body.menu-open {
+  overflow-x: hidden;
+}
+
+body.menu-open #home {
+  display: none !important;
+}
+
+body.menu-open #menu-page {
+  display: block !important;
+}
