@@ -644,3 +644,47 @@ img {
     max-width: 100%;
   }
 }
+/* FIX MOBILE MENU */
+@media (max-width: 768px) {
+  #home,
+  #menu-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 18px 18px 120px !important;
+    gap: 18px !important;
+  }
+
+  .cat-section.active {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-img {
+    height: 220px !important;
+  }
+
+  .card-name {
+    font-size: 22px !important;
+  }
+
+  .card-desc {
+    font-size: 14px !important;
+  }
+
+  .sticky-wa {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
