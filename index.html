@@ -87,6 +87,7 @@
      <button class="tab" onclick="switchCat('dishes', this)">🍽️ Блюда</button>
       <button class="tab" onclick="switchCat('soups', this)">🍲 Супы</button>
       <button class="tab" onclick="switchCat('salads', this)">🥗 Салаты</button>
+     <button class="tab" onclick="switchCat('breakfast', this)">🍳 Завтраки</button>
       <button class="tab" onclick="switchCat('desserts',this)">🍮 Десерты</button>
       <button class="tab" onclick="switchCat('bar', this)">🍹 Бар</button>
     </div>
@@ -95,189 +96,292 @@
   <!-- Products -->
   <div class="products" id="products">
  
-    <!-- ТОРТЫ -->
-    <div class="cat-section active" id="cat-cakes">
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/napoleon.jpg" alt="Наполеон">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Наполеон</div>
-          <div class="card-desc">Слоёное тесто, заварной крем, ванильный аромат</div>
-          <div class="card-foot">
-            <div class="card-price">4 200 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Наполеон')">Заказать</button>
-          </div>
-        </div>
+<!-- СУПЫ -->
+<div class="cat-section" id="cat-soups">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/shakshuka.jpg" alt="Шакшука">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Шакшука</div>
+      <div class="card-desc">Томатный соус с яйцом, нежным сыром и свежей зеленью. Подается с хрустящими тостами.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Шакшука')">Заказать</button>
       </div>
+    </div>
+  </div>
+
+</div>
  
-      <div class="card">
-        <div class="card-img">
-          <img src="images/medovik.jpg" alt="Медовик">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Медовик</div>
-          <div class="card-desc">Медовые коржи, нежный сметанный крем, карамельные нотки</div>
-          <div class="card-foot">
-            <div class="card-price">3 800 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Медовик')">Заказать</button>
-          </div>
-        </div>
+<!-- БЛЮДА -->
+<div class="cat-section" id="cat-dishes">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/omlet-s-kolbaskami.jpg" alt="Омлет с колбасками">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Омлет с колбасками</div>
+      <div class="card-desc">Воздушный омлет с колбасками черри, салатом, картофелем по-деревенски и фирменным соусом.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Омлет с колбасками')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/chockltort.jpg" alt="Шоколадный торт">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Шоколадный</div>
-          <div class="card-desc">Бисквит на бельгийском шоколаде, шоколадный ганаш, вишня</div>
-          <div class="card-foot">
-            <div class="card-price">4 500 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Шоколадный торт')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/syrniki.jpg" alt="Сырники">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Сырники</div>
+      <div class="card-desc">Нежные творожные сырники с ванильным соусом, свежими ягодами и персиком.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Сырники')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/yagodnyitort.jpg" alt="Ягодный торт">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Ягодный</div>
-          <div class="card-desc">Ванильный бисквит, сливочный крем, свежие ягоды, зеркальная глазурь</div>
-          <div class="card-foot">
-            <div class="card-price">4 900 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Ягодный торт')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/blinchiki-s-tvorogom.jpg" alt="Блинчики с творогом">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Блинчики с творогом</div>
+      <div class="card-desc">Домашние блинчики с творожной начинкой, подаются с нежным сливочным кремом и свежими ягодами.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Блинчики с творогом')">Заказать</button>
       </div>
- 
-    </div><!-- /cakes -->
- 
-    <!-- ЧИЗКЕЙКИ -->
-    <div class="cat-section" id="cat-cheesecakes">
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/newyork.jpg" alt="Нью-Йорк">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Нью-Йорк</div>
-          <div class="card-desc">Сливочный сыр, песочная основа, ванильный аромат</div>
-          <div class="card-foot">
-            <div class="card-price">1 400 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Чизкейк Нью-Йорк')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/befstroganov.jpg" alt="Бефстроганов">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Бефстроганов</div>
+      <div class="card-desc">Нежная говядина с шампиньонами и картофелем, подается с маринованными овощами.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Бефстроганов')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/strawberry_cheesecake.jpg" alt="Клубничный чизкейк">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Клубничный</div>
-          <div class="card-desc">Нежный чизкейк, крем-сыр, свежая клубника, ягодный кули</div>
-          <div class="card-foot">
-            <div class="card-price">1 600 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Клубничный чизкейк')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/oladi-iz-tsukini.jpg" alt="Оладьи из цукини">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Оладьи из цукини</div>
+      <div class="card-desc">Золотистые оладьи из цукини с грибным сливочным соусом и шампиньонами.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Оладьи из цукини')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/chernichniy_cheescake.jpg" alt="Черничный чизкейк">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Черничный</div>
-          <div class="card-desc">Творожный крем, голубика, хрустящая песочная основа</div>
-          <div class="card-foot">
-            <div class="card-price">1 600 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Черничный чизкейк')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/kurinyy-rulet-so-shpinatom.jpg" alt="Куриный рулет со шпинатом">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Куриный рулет со шпинатом</div>
+      <div class="card-desc">Нежное куриное филе со шпинатом и сыром, подается с рисом и свежим салатом.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Куриный рулет со шпинатом')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/cheeskaramel.jpg" alt="Карамельный чизкейк">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Карамельный</div>
-          <div class="card-desc">Крем-сыр, солёная карамель, брауни-основа, хрустящий декор</div>
-          <div class="card-foot">
-            <div class="card-price">1 700 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Карамельный чизкейк')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/steyk-s-ovoshchami.jpg" alt="Стейк с овощами">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Стейк с овощами</div>
+      <div class="card-desc">Сочный стейк с миксом свежих овощей и фирменной заправкой.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Стейк с овощами')">Заказать</button>
       </div>
- 
-    </div><!-- /cheesecakes -->
- 
-    <!-- БУЛОЧКИ -->
-    <div class="cat-section" id="cat-buns">
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/cinnabon.jpg" alt="Синнабон">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Синнабон</div>
-          <div class="card-desc">Мягкое тесто, корица, сливочная глазурь с сыром</div>
-          <div class="card-foot">
-            <div class="card-price">550 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Синнабон')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/kuritsa-v-panirovke.jpg" alt="Курица в панировке">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Курица в панировке</div>
+      <div class="card-desc">Хрустящее куриное филе с картофельным пюре под нежным сливочным соусом.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Курица в панировке')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/croissant.jpg" alt="Круассан">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Круассан</div>
-          <div class="card-desc">Слоёное дрожжевое тесто, хрустящий, тающий внутри</div>
-          <div class="card-foot">
-            <div class="card-price">450 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Круассан')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/kurinaya-grudka-so-shpinatom.jpg" alt="Куриная грудка со шпинатом">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Куриная грудка со шпинатом</div>
+      <div class="card-desc">Куриная грудка, фаршированная шпинатом и сыром, подается с рисом и сливочным соусом.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Куриная грудка со шпинатом')">Заказать</button>
       </div>
+    </div>
+  </div>
+
+</div>
  
-      <div class="card">
-        <div class="card-img">
-          <img src="images/smakom.jpg" alt="С маком">
-        </div>
-        <div class="card-body">
-          <div class="card-name">С маком</div>
-          <div class="card-desc">Сдобное тесто, начинка из мака с мёдом, посыпка кунжутом</div>
-          <div class="card-foot">
-            <div class="card-price">380 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Булочка с маком')">Заказать</button>
-          </div>
-        </div>
+ <!-- САЛАТЫ -->
+<div class="cat-section" id="cat-salads">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/salat-s-klubnikoy-i-apelsinom.jpg" alt="Салат с клубникой и апельсином">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Салат с клубникой и апельсином</div>
+      <div class="card-desc">Микс свежих салатов, клубника, апельсин, сливочный сыр, тыквенные семечки и фирменная цитрусовая заправка.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Салат с клубникой и апельсином')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/briosh.jpg" alt="Бриошь">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Бриошь</div>
-          <div class="card-desc">Французская сдоба, сливочная, нежная, со сливочным маслом</div>
-          <div class="card-foot">
-            <div class="card-price">420 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Бриошь')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/zelenyy-salat-s-avokado.jpg" alt="Зеленый салат с авокадо">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Зеленый салат с авокадо</div>
+      <div class="card-desc">Свежие листья салата, авокадо, томаты черри, пармезан, тыквенные семечки и фирменная заправка.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Зеленый салат с авокадо')">Заказать</button>
       </div>
- 
-    </div><!-- /buns -->
- 
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/salat-s-lososem.jpg" alt="Салат с лососем">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Салат с лососем</div>
+      <div class="card-desc">Микс свежих салатов, слабосоленый лосось, томаты черри, свежий огурец, пармезан и фирменная цитрусовая заправка.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Салат с лососем')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+   <!-- ЗАВТРАКИ -->
+<div class="cat-section" id="cat-breakfast">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/avokado-tost-s-yaytsom-pashot.jpg" alt="Авокадо тост с яйцом пашот">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Авокадо тост с яйцом пашот</div>
+      <div class="card-desc">Поджаренный деревенский хлеб, крем из авокадо, два яйца пашот, свежий салат и соус песто.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Авокадо тост с яйцом пашот')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/angliyskiy-zavtrak.jpg" alt="Английский завтрак">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Английский завтрак</div>
+      <div class="card-desc">Яичница, сосиски, бекон, фасоль, шампиньоны и хрустящие тосты.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Английский завтрак')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/kruassan-s-indeykoy.jpg" alt="Круассан с индейкой и яйцом пашот">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Круассан с индейкой и яйцом пашот</div>
+      <div class="card-desc">Свежий круассан с нежной индейкой, яйцом пашот, миксом салатов, сливочным соусом и пармезаном.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Круассан с индейкой и яйцом пашот')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/kruassan-s-lososem.jpg" alt="Круассан с лососем и яйцом пашот">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Круассан с лососем и яйцом пашот</div>
+      <div class="card-desc">Хрустящий круассан с лососем, яйцом пашот, томатами, свежей зеленью и сливочным сыром.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Круассан с лососем и яйцом пашот')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/belgiyskie-vafli-s-lososem.jpg" alt="Бельгийские вафли с лососем">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Бельгийские вафли с лососем</div>
+      <div class="card-desc">Домашние бельгийские вафли с лососем, яйцом пашот, сливочным сыром и свежей зеленью.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Бельгийские вафли с лососем')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/ovsyanaya-kasha.jpg" alt="Овсяная каша с фруктами">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Овсяная каша с фруктами</div>
+      <div class="card-desc">Нежная овсяная каша с сезонными фруктами, ягодами, орехами и свежей мятой.</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Овсяная каша с фруктами')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+   
     <!-- ДЕСЕРТЫ -->
 <div class="cat-section" id="cat-desserts">
 
