@@ -87,7 +87,7 @@
       <button class="tab active" onclick="switchCat('cakes',this)">🎂 Торты</button>
       <button class="tab" onclick="switchCat('cheesecakes',this)">🍰 Чизкейки</button>
       <button class="tab" onclick="switchCat('buns',this)">🥐 Булочки</button>
-      <button class="tab" onclick="switchCat('pastry',this)">🍮 Пирожные</button>
+      <button class="tab" onclick="switchCat('desserts',this)">🍮 Десерты</button>
       <button class="tab" onclick="switchCat('cookies',this)">🍪 Печенье</button>
       <button class="tab" onclick="switchCat('drinks',this)">☕ Напитки</button>
     </div>
@@ -279,67 +279,333 @@
  
     </div><!-- /buns -->
  
-    <!-- ПИРОЖНЫЕ -->
-    <div class="cat-section" id="cat-pastry">
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/ecler.jpg" alt="Эклер">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Эклер</div>
-          <div class="card-desc">Заварное тесто, крем патисьер, шоколадная глазурь</div>
-          <div class="card-foot">
-            <div class="card-price">480 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Эклер')">Заказать</button>
-          </div>
-        </div>
+    <!-- ДЕСЕРТЫ -->
+<div class="cat-section" id="cat-desserts">
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-fistashka-malina.jpg" alt="Чизкейк Фисташка малина">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк Фисташка малина</div>
+      <div class="card-desc">Нежный фисташковый бисквит с сырным слоем на основе фисташковой муки, украшенный свежей малиной</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк Фисташка малина')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/tiramisu.jpg" alt="Тирамису">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Тирамису</div>
-          <div class="card-desc">Савоярди, маскарпоне, эспрессо, какао-пудра</div>
-          <div class="card-foot">
-            <div class="card-price">650 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Тирамису')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/ispanskiy-chizkeyk.jpg" alt="Испанский чизкейк">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Испанский чизкейк</div>
+      <div class="card-desc">Нежный сливочно-сырный слой с карамельной корочкой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Испанский чизкейк')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/macarons.jpg" alt="Макарон">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Макарон</div>
-          <div class="card-desc">Миндальное безе, нежная начинка на выбор, яркие цвета</div>
-          <div class="card-foot">
-            <div class="card-price">280 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Макарон')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/pavlova.jpg" alt="Десерт Павлова">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Десерт Павлова</div>
+      <div class="card-desc">Воздушное безе с хрустящей корочкой и мягкой серединой, крем-чиз, клубника, ежевика и фисташки</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Десерт Павлова')">Заказать</button>
       </div>
- 
-      <div class="card">
-        <div class="card-img">
-          <img src="images/brauni.jpg" alt="Брауни">
-        </div>
-        <div class="card-body">
-          <div class="card-name">Брауни</div>
-          <div class="card-desc">Бельгийский шоколад, хрустящая корочка, тающая серединка</div>
-          <div class="card-foot">
-            <div class="card-price">520 <span>₸</span></div>
-            <button class="order-btn" onclick="orderWA('Брауни')">Заказать</button>
-          </div>
-        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/tvorozhnoe-koltso.jpg" alt="Творожное кольцо">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Творожное кольцо</div>
+      <div class="card-desc">Воздушное заварное тесто с нежной начинкой из крем-чиза на основе творожного сыра и сахарной пудрой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Творожное кольцо')">Заказать</button>
       </div>
- 
-    </div><!-- /pastry -->
- 
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/shokoladnyy-ekler.jpg" alt="Шоколадный эклер">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Шоколадный эклер</div>
+      <div class="card-desc">Классическое заварное тесто с нежным кремом «Пломбир», покрытое насыщенной шоколадной глазурью</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Шоколадный эклер')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-shokoladnyy.jpg" alt="Чизкейк шоколадный">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк шоколадный</div>
+      <div class="card-desc">Классическая песочная основа с нежным сливочно-сырным слоем и шоколадом</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк шоколадный')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-mars.jpg" alt="Чизкейк Марс">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк Марс</div>
+      <div class="card-desc">Песочная основа с сырным слоем, кусочками шоколада Mars и нежной карамелью</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк Марс')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-brauni.jpg" alt="Чизкейк Брауни">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк Брауни</div>
+      <div class="card-desc">Песочная основа, сливочно-сырный слой, карамель и шоколадный бисквит брауни</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк Брауни')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-slivochnyy.jpg" alt="Чизкейк сливочный">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк сливочный</div>
+      <div class="card-desc">Классический чизкейк на песочной основе с бархатистым сливочно-сырным слоем</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк сливочный')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-medovik.jpg" alt="Чизкейк Медовик">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк Медовик</div>
+      <div class="card-desc">Песочная основа, сырный слой с мёдом и тонкие медовые коржи</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк Медовик')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/chizkeyk-tara.jpg" alt="Чизкейк с тары">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Чизкейк с тары</div>
+      <div class="card-desc">Классическая песочная основа и нежный сырный слой с добавлением тары</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Чизкейк с тары')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/tartaletka-klubnika.jpg" alt="Тарталетка клубника">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Тарталетка клубника</div>
+      <div class="card-desc">Песочное тесто с нежным ванильным заварным кремом и свежей клубникой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Тарталетка клубника')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/tartaletka-golubika.jpg" alt="Тарталетка голубика">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Тарталетка голубика</div>
+      <div class="card-desc">Песочное тесто с ванильным заварным кремом и свежей голубикой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Тарталетка голубика')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/tartaletka-malina.jpg" alt="Тарталетка с малиной">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Тарталетка с малиной</div>
+      <div class="card-desc">Песочное тесто с ванильным заварным кремом и свежей малиной</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Тарталетка с малиной')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/banoffi-pay.jpg" alt="Баноффи пай">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Баноффи пай</div>
+      <div class="card-desc">Песочная основа с варёной сгущёнкой, бананами, крем-чизом и лёгким какао</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Баноффи пай')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/tartaletka-ezhevika.jpg" alt="Тарталетка ежевика">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Тарталетка ежевика</div>
+      <div class="card-desc">Песочное тесто с нежным ванильным заварным кремом и свежей ежевикой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Тарталетка ежевика')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/sinnabony.jpg" alt="Синнабоны">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Синнабоны</div>
+      <div class="card-desc">Булочки с ароматной корицей и сахаром, покрытые нежным сливочным кремом</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Синнабоны')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/molochnaya-devochka.jpg" alt="Молочная девочка">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Молочная девочка</div>
+      <div class="card-desc">Тонкие бисквитные коржи на сгущённом молоке, пропитанные воздушным кремом</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Молочная девочка')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/sendvich-brauni.jpg" alt="Сэндвич брауни">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Сэндвич брауни</div>
+      <div class="card-desc">Две половинки шоколадного печенья-брауни с крем-чизом внутри и шоколадной глазурью</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Сэндвич брауни')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/trayfl-banan.jpg" alt="Трайфл Банан">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Трайфл Банан</div>
+      <div class="card-desc">Слои влажного бисквита, сливочного крема и кусочков банана</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Трайфл Банан')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/krasnyy-barhat.jpg" alt="Красный бархат">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Красный бархат</div>
+      <div class="card-desc">Влажные рубиновые коржи с какао и нежным крем-чизом</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Красный бархат')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/limonnaya-tartaletka.jpg" alt="Лимонная тарталетка">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Лимонная тарталетка</div>
+      <div class="card-desc">Хрустящая песочная основа с кисло-сладкой лимонной начинкой и воздушной меренгой</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Лимонная тарталетка')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img">
+      <img src="images/trayfl-snikers.jpg" alt="Трайфл Сникерс">
+    </div>
+    <div class="card-body">
+      <div class="card-name">Трайфл Сникерс</div>
+      <div class="card-desc">Слои влажного бисквита, сливочного крема, солёной карамели и обжаренного арахиса</div>
+      <div class="card-foot">
+        <div class="card-price">2000 <span>₸</span></div>
+        <button class="order-btn" onclick="orderWA('Трайфл Сникерс')">Заказать</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /desserts -->
+   
     <!-- ПЕЧЕНЬЕ -->
     <div class="cat-section" id="cat-cookies">
  
