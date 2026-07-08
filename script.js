@@ -9,6 +9,12 @@ function openMenu() {
   document.getElementById('home').classList.remove('active');
   document.getElementById('menu-page').classList.add('active');
   document.getElementById('stickyWa').style.display = 'block';
+  
+   const firstTab = document.querySelector('.tab');
+  if (firstTab) {
+    switchCat('dishes', firstTab);
+  }
+
   window.scrollTo(0, 0);
 }
 
