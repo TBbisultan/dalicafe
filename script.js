@@ -1,4 +1,4 @@
-const WA_NUMBER = '77789256878'; // ← заменить на реальный номер без +
+const WA_NUMBER = '77086814299';
 
 let cart = {};
 
@@ -9,8 +9,9 @@ function openMenu() {
   document.getElementById('home').classList.remove('active');
   document.getElementById('menu-page').classList.add('active');
   document.getElementById('stickyWa').style.display = 'block';
-  
-   const firstTab = document.querySelector('.tab');
+
+  const firstTab = document.querySelector('.tab');
+
   if (firstTab) {
     switchCat('dishes', firstTab);
   }
@@ -26,11 +27,75 @@ function closeMenu() {
 }
 
 function switchCat(cat, btn) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+
   btn.classList.add('active');
 
-  document.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
-  document.getElementById('cat-' + cat).classList.add('active');
+  document.querySelectorAll('.cat-section').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  const category = document.getElementById('cat-' + cat);
+
+  if (category) {
+    category.classList.add('active');
+  }
+}
+
+/*
+Берёт цену прямо из карточки товара.
+
+Сначала ищет элемент с классом .price.
+Если такого класса нет, ищет любой текст вида:
+1 500 ₸
+2500 ₸
+*/
+function getItemPrice(item) {
+  const cards = document.querySelectorAll('.card');
+
+  for (const card of cards) {
+    const button = card.querySelector('.order-btn, .qty-control');
+
+    if (!button) continue;
+
+    const buttons = button.matches('button')
+      ? [button]
+      : button.querySelectorAll('button');
+
+    let cardItem = null;
+
+    buttons.forEach(btn => {
+      const click = btn.getAttribute('onclick') || '';
+
+      const match = click.match(
+        /(?:orderWA|addToCart|removeFromCart)\(['"](.+?)['"]\)/
+      );
+
+      if (match) {
+        cardItem = match[1];
+      }
+    });
+
+    if (cardItem !== item) continue;
+
+    const priceElement = card.querySelector('.price');
+    const priceText = priceElement
+      ? priceElement.textContent
+      : card.textContent;
+
+    const priceMatch = priceText.match(/(\d[\d\s]*)\s*₸/);
+
+    if (!priceMatch) {
+      console.warn(`Цена для товара "${item}" не найдена`);
+      return 0;
+    }
+
+    return Number(priceMatch[1].replace(/\s/g, ''));
+  }
+
+  return 0;
 }
 
 function orderWA(item) {
@@ -38,7 +103,15 @@ function orderWA(item) {
 }
 
 function addToCart(item) {
-  cart[item] = (cart[item] || 0) + 1;
+  if (!cart[item]) {
+    cart[item] = {
+      qty: 0,
+      price: getItemPrice(item)
+    };
+  }
+
+  cart[item].qty++;
+
   updateAllButtons();
   updateCartButton();
 }
@@ -46,9 +119,9 @@ function addToCart(item) {
 function removeFromCart(item) {
   if (!cart[item]) return;
 
-  cart[item]--;
+  cart[item].qty--;
 
-  if (cart[item] <= 0) {
+  if (cart[item].qty <= 0) {
     delete cart[item];
   }
 
@@ -58,20 +131,34 @@ function removeFromCart(item) {
 
 function updateAllButtons() {
   document.querySelectorAll('.card').forEach(card => {
-    const btn = card.querySelector('.order-btn, .qty-control');
-    if (!btn) return;
+    const control = card.querySelector('.order-btn, .qty-control');
 
-    const oldClick = btn.getAttribute('onclick') || btn.querySelector('button:last-child')?.getAttribute('onclick');
-    if (!oldClick) return;
+    if (!control) return;
 
-    const match = oldClick.match(/(?:orderWA|addToCart)\('(.+?)'\)/);
-    if (!match) return;
+    const clickableElements = control.matches('button')
+      ? [control]
+      : control.querySelectorAll('button');
 
-    const item = match[1];
-    const qty = cart[item] || 0;
+    let item = null;
+
+    clickableElements.forEach(btn => {
+      const click = btn.getAttribute('onclick') || '';
+
+      const match = click.match(
+        /(?:orderWA|addToCart|removeFromCart)\(['"](.+?)['"]\)/
+      );
+
+      if (match) {
+        item = match[1];
+      }
+    });
+
+    if (!item) return;
+
+    const qty = cart[item]?.qty || 0;
 
     if (qty > 0) {
-      btn.outerHTML = `
+      control.outerHTML = `
         <div class="qty-control">
           <button onclick="removeFromCart('${item}')">−</button>
           <span>${qty}</span>
@@ -79,25 +166,42 @@ function updateAllButtons() {
         </div>
       `;
     } else {
-      btn.outerHTML = `<button class="order-btn" onclick="orderWA('${item}')">+</button>`;
+      control.outerHTML = `
+        <button class="order-btn" onclick="orderWA('${item}')">+</button>
+      `;
     }
   });
 }
 
 function getCartCount() {
-  return Object.values(cart).reduce((sum, qty) => sum + qty, 0);
+  return Object.values(cart).reduce((sum, product) => {
+    return sum + product.qty;
+  }, 0);
+}
+
+function getCartTotal() {
+  return Object.values(cart).reduce((sum, product) => {
+    return sum + product.price * product.qty;
+  }, 0);
+}
+
+function formatPrice(price) {
+  return price.toLocaleString('ru-RU') + ' ₸';
 }
 
 function updateCartButton() {
   const count = getCartCount();
+  const total = getCartTotal();
   const waBtn = document.querySelector('.wa-btn');
 
   if (!waBtn) return;
 
   if (count > 0) {
-    waBtn.innerHTML = `🛒 Корзина — ${count} шт · Заказать`;
+    waBtn.innerHTML = `
+      🛒 Корзина — ${count} шт · ${formatPrice(total)} · Заказать
+    `;
   } else {
-    waBtn.innerHTML = `🛒 Корзина пуста`;
+    waBtn.innerHTML = '🛒 Корзина пуста';
   }
 }
 
@@ -115,11 +219,19 @@ function openWA() {
     msg += `Стол №${tableNumber}\n\n`;
   }
 
-  items.forEach(([name, qty]) => {
-    msg += `• ${name} — ${qty} шт\n`;
+  items.forEach(([name, product]) => {
+    const itemTotal = product.price * product.qty;
+
+    msg += `• ${name}\n`;
+    msg += `${product.qty} шт × ${formatPrice(product.price)} = ${formatPrice(itemTotal)}\n\n`;
   });
 
-  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  msg += `Итого: ${formatPrice(getCartTotal())}`;
+
+  window.open(
+    `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,
+    '_blank'
+  );
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -127,6 +239,11 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = '+';
   });
 
-  document.getElementById('stickyWa').style.display = 'none';
+  const stickyWa = document.getElementById('stickyWa');
+
+  if (stickyWa) {
+    stickyWa.style.display = 'none';
+  }
+
   updateCartButton();
 });
