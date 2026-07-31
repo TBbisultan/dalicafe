@@ -99,7 +99,91 @@
 <!-- СУПЫ -->
 <div class="cat-section" id="cat-soups">
 
-  
+  <button class="tab" onclick="switchCat('soups', this)">🍲 Супы</button>
+
+<div class="card">
+  <div class="card-img">
+    <img src="pelmeni-s-bulonom.jpg" alt="Пельмени с бульоном">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Пельмени с бульоном</div>
+    <div class="card-desc">Домашние пельмени в ароматном мясном бульоне со свежей зеленью — сытное и согревающее блюдо.</div>
+    <div class="card-foot">
+      <div class="card-price">2190 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Пельмени с бульоном')">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-img">
+    <img src="okroshka.jpg" alt="Окрошка">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Окрошка</div>
+    <div class="card-desc">Холодный суп, освежающий в жаркую погоду.</div>
+    <div class="card-foot">
+      <div class="card-price">1990 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Окрошка')">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-img">
+    <img src="sup-lapsha.jpg" alt="Суп лапша">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Суп лапша</div>
+    <div class="card-desc">Прозрачный куриный бульон с домашней лапшой, нежным куриным филе, морковью и свежей зеленью.</div>
+    <div class="card-foot">
+      <div class="card-price">1990 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Суп лапша')">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-img">
+    <img src="ramen.jpg" alt="Рамен">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Рамен</div>
+    <div class="card-desc">Ароматный бульон с лапшой, сочной курицей или говядиной, маринованным яйцом, зелёным луком, нори и кунжутом.</div>
+    <div class="card-foot">
+      <div class="card-price">2690 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Рамен')">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-img">
+    <img src="tykvennyy-krem-sup.jpg" alt="Тыквенный крем-суп">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Тыквенный крем-суп</div>
+    <div class="card-desc">Нежный крем-суп из запечённой тыквы со сливками, ароматными специями и хрустящими тыквенными семечками.</div>
+    <div class="card-foot">
+      <div class="card-price">2090 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Тыквенный крем-суп')">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-img">
+    <img src="krem-sup-chechevichnyy.jpg" alt="Крем-суп чечевичный">
+  </div>
+  <div class="card-body">
+    <div class="card-name">Крем-суп чечевичный</div>
+    <div class="card-desc">Нежный крем-суп из красной чечевицы с овощами, сливками и ароматными специями, подается с хрустящими гренками.</div>
+    <div class="card-foot">
+      <div class="card-price">2090 <span>₸</span></div>
+      <button class="order-btn" onclick="orderWA('Крем-суп чечевичный')">Заказать</button>
+    </div>
+  </div>
+</div>
 
 </div>
  
@@ -112,10 +196,10 @@
       <img src="images/befstroganov.jpg" alt="Бефстроганов">
     </div>
     <div class="card-body">
-      <div class="card-name">Бефстроганов</div>
+      <div class="card-name">Жареная картошка с грибами</div>
       <div class="card-desc">Нежная говядина с шампиньонами и картофелем, подается с маринованными овощами.</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">3490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Бефстроганов')">Заказать</button>
       </div>
     </div>
@@ -140,10 +224,10 @@
       <img src="images/kurinyy-rulet-so-shpinatom.jpg" alt="Куриный рулет со шпинатом">
     </div>
     <div class="card-body">
-      <div class="card-name">Куриный рулет со шпинатом</div>
+      <div class="card-name">Куриный рулет с соусом пэста</div>
       <div class="card-desc">Нежное куриное филе со шпинатом и сыром, подается с рисом и свежим салатом.</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">3490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Куриный рулет со шпинатом')">Заказать</button>
       </div>
     </div>
@@ -154,10 +238,10 @@
       <img src="images/steyk-s-ovoshchami.jpg" alt="Стейк с овощами">
     </div>
     <div class="card-body">
-      <div class="card-name">Стейк с овощами</div>
+      <div class="card-name">Говяжая вырезка с микс салатом</div>
       <div class="card-desc">Сочный стейк с миксом свежих овощей и фирменной заправкой.</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">3690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Стейк с овощами')">Заказать</button>
       </div>
     </div>
@@ -168,10 +252,10 @@
       <img src="images/kuritsa-v-panirovke.jpg" alt="Курица в панировке">
     </div>
     <div class="card-body">
-      <div class="card-name">Курица в панировке</div>
+      <div class="card-name">Куриный шницель</div>
       <div class="card-desc">Хрустящее куриное филе с картофельным пюре под нежным сливочным соусом.</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">3490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Курица в панировке')">Заказать</button>
       </div>
     </div>
@@ -185,7 +269,7 @@
       <div class="card-name">Куриная грудка со шпинатом</div>
       <div class="card-desc">Куриная грудка, фаршированная шпинатом и сыром, подается с рисом и сливочным соусом.</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">3490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Куриная грудка со шпинатом')">Заказать</button>
       </div>
     </div>
@@ -210,20 +294,7 @@
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-img">
-      <img src="images/zelenyy-salat-s-avokado.jpg" alt="Зеленый салат с авокадо">
-    </div>
-    <div class="card-body">
-      <div class="card-name">Зеленый салат с авокадо</div>
-      <div class="card-desc">Свежие листья салата, авокадо, томаты черри, пармезан, тыквенные семечки и фирменная заправка.</div>
-      <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
-        <button class="order-btn" onclick="orderWA('Зеленый салат с авокадо')">Заказать</button>
-      </div>
-    </div>
-  </div>
-
+  
   <div class="card">
     <div class="card-img">
       <img src="images/kruassan-s-lososem.jpg" alt="Салат с лососем">
@@ -394,7 +465,7 @@
       <div class="card-name">Чизкейк Фисташка малина</div>
       <div class="card-desc">Нежный фисташковый бисквит с сырным слоем на основе фисташковой муки, украшенный свежей малиной</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк Фисташка малина')">Заказать</button>
       </div>
     </div>
@@ -408,7 +479,7 @@
       <div class="card-name">Испанский чизкейк</div>
       <div class="card-desc">Нежный сливочно-сырный слой с карамельной корочкой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Испанский чизкейк')">Заказать</button>
       </div>
     </div>
@@ -422,7 +493,7 @@
       <div class="card-name">Десерт Павлова</div>
       <div class="card-desc">Воздушное безе с хрустящей корочкой и мягкой серединой, крем-чиз, клубника, ежевика и фисташки</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690<span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Десерт Павлова')">Заказать</button>
       </div>
     </div>
@@ -436,7 +507,7 @@
       <div class="card-name">Творожное кольцо</div>
       <div class="card-desc">Воздушное заварное тесто с нежной начинкой из крем-чиза на основе творожного сыра и сахарной пудрой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Творожное кольцо')">Заказать</button>
       </div>
     </div>
@@ -450,7 +521,7 @@
       <div class="card-name">Шоколадный эклер</div>
       <div class="card-desc">Классическое заварное тесто с нежным кремом «Пломбир», покрытое насыщенной шоколадной глазурью</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">990 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Шоколадный эклер')">Заказать</button>
       </div>
     </div>
@@ -464,7 +535,7 @@
     <div class="card-name">Шоколадная тарталетка</div>
     <div class="card-desc">Десерт на основе рассыпчатого песочного теста, наполненный дольками грецкого ореха и нежным шоколадным ганашем.</div>
     <div class="card-foot">
-      <div class="card-price">2000 <span>₸</span></div>
+      <div class="card-price">1490 <span>₸</span></div>
       <button class="order-btn" onclick="orderWA('Шоколадная тарталетка')">Заказать</button>
     </div>
   </div>
@@ -478,7 +549,7 @@
     <div class="card-name">Ягодная тарталетка</div>
     <div class="card-desc">Десерт на основе рассыпчатого песочного теста, наполненный нежным шоколадным муссом и покрытый клубничным конфи.</div>
     <div class="card-foot">
-      <div class="card-price">2000 <span>₸</span></div>
+      <div class="card-price">1490 <span>₸</span></div>
       <button class="order-btn" onclick="orderWA('Ягодная тарталетка')">Заказать</button>
     </div>
   </div>
@@ -492,7 +563,7 @@
       <div class="card-name">Чизкейк шоколадный</div>
       <div class="card-desc">Классическая песочная основа с нежным сливочно-сырным слоем и шоколадом</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк шоколадный')">Заказать</button>
       </div>
     </div>
@@ -506,7 +577,7 @@
       <div class="card-name">Чизкейк Марс</div>
       <div class="card-desc">Песочная основа с сырным слоем, кусочками шоколада Mars и нежной карамелью</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк Марс')">Заказать</button>
       </div>
     </div>
@@ -520,7 +591,7 @@
       <div class="card-name">Чизкейк Брауни</div>
       <div class="card-desc">Песочная основа, сливочно-сырный слой, карамель и шоколадный бисквит брауни</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк Брауни')">Заказать</button>
       </div>
     </div>
@@ -534,7 +605,7 @@
       <div class="card-name">Чизкейк сливочный</div>
       <div class="card-desc">Классический чизкейк на песочной основе с бархатистым сливочно-сырным слоем</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк сливочный')">Заказать</button>
       </div>
     </div>
@@ -548,7 +619,7 @@
       <div class="card-name">Чизкейк Медовик</div>
       <div class="card-desc">Песочная основа, сырный слой с мёдом и тонкие медовые коржи</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк Медовик')">Заказать</button>
       </div>
     </div>
@@ -562,7 +633,7 @@
       <div class="card-name">Чизкейк с тары</div>
       <div class="card-desc">Классическая песочная основа и нежный сырный слой с добавлением тары</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Чизкейк с тары')">Заказать</button>
       </div>
     </div>
@@ -576,7 +647,7 @@
       <div class="card-name">Тарталетка клубника</div>
       <div class="card-desc">Песочное тесто с нежным ванильным заварным кремом и свежей клубникой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Тарталетка клубника')">Заказать</button>
       </div>
     </div>
@@ -590,7 +661,7 @@
       <div class="card-name">Тарталетка голубика</div>
       <div class="card-desc">Песочное тесто с ванильным заварным кремом и свежей голубикой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Тарталетка голубика')">Заказать</button>
       </div>
     </div>
@@ -604,7 +675,7 @@
       <div class="card-name">Тарталетка с малиной</div>
       <div class="card-desc">Песочное тесто с ванильным заварным кремом и свежей малиной</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Тарталетка с малиной')">Заказать</button>
       </div>
     </div>
@@ -618,7 +689,7 @@
       <div class="card-name">Баноффи пай</div>
       <div class="card-desc">Песочная основа с варёной сгущёнкой, бананами, крем-чизом и лёгким какао</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Баноффи пай')">Заказать</button>
       </div>
     </div>
@@ -632,7 +703,7 @@
       <div class="card-name">Тарталетка ежевика</div>
       <div class="card-desc">Песочное тесто с нежным ванильным заварным кремом и свежей ежевикой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Тарталетка ежевика')">Заказать</button>
       </div>
     </div>
@@ -646,7 +717,7 @@
       <div class="card-name">Синнабоны</div>
       <div class="card-desc">Булочки с ароматной корицей и сахаром, покрытые нежным сливочным кремом</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1390 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Синнабоны')">Заказать</button>
       </div>
     </div>
@@ -660,7 +731,7 @@
       <div class="card-name">Молочная девочка</div>
       <div class="card-desc">Тонкие бисквитные коржи на сгущённом молоке, пропитанные воздушным кремом</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Молочная девочка')">Заказать</button>
       </div>
     </div>
@@ -674,7 +745,7 @@
       <div class="card-name">Сэндвич брауни</div>
       <div class="card-desc">Две половинки шоколадного печенья-брауни с крем-чизом внутри и шоколадной глазурью</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Сэндвич брауни')">Заказать</button>
       </div>
     </div>
@@ -688,7 +759,7 @@
       <div class="card-name">Трайфл Банан</div>
       <div class="card-desc">Слои влажного бисквита, сливочного крема и кусочков банана</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Трайфл Банан')">Заказать</button>
       </div>
     </div>
@@ -702,7 +773,7 @@
       <div class="card-name">Красный бархат</div>
       <div class="card-desc">Влажные рубиновые коржи с какао и нежным крем-чизом</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1690 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Красный бархат')">Заказать</button>
       </div>
     </div>
@@ -716,7 +787,7 @@
       <div class="card-name">Лимонная тарталетка</div>
       <div class="card-desc">Хрустящая песочная основа с кисло-сладкой лимонной начинкой и воздушной меренгой</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Лимонная тарталетка')">Заказать</button>
       </div>
     </div>
@@ -730,7 +801,7 @@
       <div class="card-name">Трайфл Сникерс</div>
       <div class="card-desc">Слои влажного бисквита, сливочного крема, солёной карамели и обжаренного арахиса</div>
       <div class="card-foot">
-        <div class="card-price">2000 <span>₸</span></div>
+        <div class="card-price">1490 <span>₸</span></div>
         <button class="order-btn" onclick="orderWA('Трайфл Сникерс')">Заказать</button>
       </div>
     </div>
